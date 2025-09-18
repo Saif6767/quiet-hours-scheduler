@@ -1,8 +1,10 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
-# dependencies
-quiet-hours-frontend/node_modules
-quiet-hours-backend/node_modules
+# =========================
+# Dependencies
+# =========================
+quiet-hours-frontend/node_modules/
+quiet-hours-backend/node_modules/
 /.pnp
 .pnp.*
 .yarn/*
@@ -11,33 +13,53 @@ quiet-hours-backend/node_modules
 !.yarn/releases
 !.yarn/versions
 
-# testing
+# =========================
+# Testing & Coverage
+# =========================
 /coverage
 
-# next.js
-/.next/
-/out/
+# =========================
+# Next.js (frontend)
+# =========================
+quiet-hours-frontend/.next/
+quiet-hours-frontend/out/
 
-# production
-/build
+# =========================
+# Production build
+# =========================
+quiet-hours-frontend/build/
+quiet-hours-backend/build/
+dist/
 
-# misc
+# =========================
+# Miscellaneous
+# =========================
 .DS_Store
 *.pem
 
-# debug
+# Debug logs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-.pnpm-debug.log*
+pnpm-debug.log*
 
-# env files (can opt-in for committing if needed)
-quiet-hours-frontend/.env.local*
-quiet-hours-backend/.env*
+# =========================
+# Environment files
+# =========================
+quiet-hours-frontend/.env
+quiet-hours-frontend/.env.local
+quiet-hours-frontend/.env.*.local
+quiet-hours-backend/.env
+quiet-hours-backend/.env.local
+quiet-hours-backend/.env.*.local
 
-# vercel
+# =========================
+# Vercel
+# =========================
 .vercel
 
-# typescript
+# =========================
+# TypeScript (if used)
+# =========================
 *.tsbuildinfo
 next-env.d.ts
